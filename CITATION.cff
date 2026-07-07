@@ -3,8 +3,8 @@ message: "Please cite the original study and this companion repository if reused
 title: "Multipopulation Experiment Runner"
 type: software
 authors:
-  - family-names: "YOUR_LAST_NAME"
-    given-names: "YOUR_FIRST_NAME"
+  - family-names: "Garcia"
+    given-names: "Jennifer"
 version: 0.1.0
 date-released: 2026-07-07
 references:
