@@ -1,0 +1,122 @@
+$ python run.py validate configs/two_deme_migration_sweep.yml
+[
+  {
+    "run_id": "two-deme-local-adaptation-001-migration_scale-0.5",
+    "model": "new_mutation",
+    "population_sizes": [
+      400,
+      400
+    ],
+    "selection_coefficients": [
+      0.04,
+      -0.04
+    ],
+    "migration_matrix": [
+      [
+        -0.005,
+        0.005
+      ],
+      [
+        0.005,
+        -0.005
+      ]
+    ],
+    "sep": 400,
+    "replicates": 2000,
+    "initial_population": 0,
+    "sweep_name": "migration_scale",
+    "sweep_value": 0.5
+  },
+  {
+    "run_id": "two-deme-local-adaptation-002-migration_scale-1.0",
+    "model": "new_mutation",
+    "population_sizes": [
+      400,
+      400
+    ],
+    "selection_coefficients": [
+      0.04,
+      -0.04
+    ],
+    "migration_matrix": [
+      [
+        -0.01,
+        0.01
+      ],
+      [
+        0.01,
+        -0.01
+      ]
+    ],
+    "sep": 400,
+    "replicates": 2000,
+    "initial_population": 0,
+    "sweep_name": "migration_scale",
+    "sweep_value": 1.0
+  },
+  {
+    "run_id": "two-deme-local-adaptation-003-migration_scale-2.0",
+    "model": "new_mutation",
+    "population_sizes": [
+      400,
+      400
+    ],
+    "selection_coefficients": [
+      0.04,
+      -0.04
+    ],
+    "migration_matrix": [
+      [
+        -0.02,
+        0.02
+      ],
+      [
+        0.02,
+        -0.02
+      ]
+    ],
+    "sep": 400,
+    "replicates": 2000,
+    "initial_population": 0,
+    "sweep_name": "migration_scale",
+    "sweep_value": 2.0
+  },
+  {
+    "run_id": "two-deme-local-adaptation-004-migration_scale-4.0",
+    "model": "new_mutation",
+    "population_sizes": [
+      400,
+      400
+    ],
+    "selection_coefficients": [
+      0.04,
+      -0.04
+    ],
+    "migration_matrix": [
+      [
+        -0.04,
+        0.04
+      ],
+      [
+        0.04,
+        -0.04
+      ]
+    ],
+    "sep": 400,
+    "replicates": 2000,
+    "initial_population": 0,
+    "sweep_name": "migration_scale",
+    "sweep_value": 4.0
+  }
+]
+Validated 4 run(s).
+
+$ python run.py render configs/two_deme_migration_sweep.yml --output-dir generated_sources
+Rendered 8 C++ main files to generated_sources
+
+$ python run.py demo configs/two_deme_migration_sweep.yml --output-dir results/demo
+Synthetic demo written to results/demo/results.csv
+
+$ python -m pytest -q
+.......                                                                  [100%]
+7 passed in 4.23s

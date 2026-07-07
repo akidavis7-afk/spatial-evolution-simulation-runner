@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.out
+*.exe
+results/real/
+results/report/
+generated_sources/*/

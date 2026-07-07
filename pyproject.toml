@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multipopulation-experiment-runner"
+version = "0.1.0"
+description = "Configuration-driven companion runner for a published multipopulation approximation model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "YOUR NAME"}
+]
+dependencies = [
+  "PyYAML>=6.0,<7",
+  "pandas>=2.0,<3",
+  "matplotlib>=3.8,<4",
+  "tabulate>=0.9,<1"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+multipop-runner = "multipop_runner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

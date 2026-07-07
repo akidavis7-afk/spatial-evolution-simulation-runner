@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the original study and this companion repository if reused."
+title: "Multipopulation Experiment Runner"
+type: software
+authors:
+  - family-names: "YOUR_LAST_NAME"
+    given-names: "YOUR_FIRST_NAME"
+version: 0.1.0
+date-released: 2026-07-07
+references:
+  - type: article
+    title: "Maintenance of polymorphism in spatially heterogeneous environments"
+    authors:
+      - family-names: "Sakamoto"
+        given-names: "Takahiro"
+      - family-names: "Yeaman"
+        given-names: "Sam"
+    doi: "10.1093/genetics/iyaf229"

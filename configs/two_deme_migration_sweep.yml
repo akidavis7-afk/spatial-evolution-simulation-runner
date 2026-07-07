@@ -1,0 +1,22 @@
+experiment:
+  name: two-deme-local-adaptation
+  model: new_mutation
+
+parameters:
+  # Haploid population sizes, following the upstream program convention.
+  population_sizes: [400, 400]
+  selection_coefficients: [0.04, -0.04]
+
+  # Backward migration matrix. Off-diagonal entries are non-negative and
+  # every row, including its diagonal entry, must sum to zero.
+  migration_matrix:
+    - [-0.01, 0.01]
+    - [0.01, -0.01]
+
+  initial_population: 0
+  sep: 400
+  replicates: 2000
+
+sweeps:
+  - target: migration_scale
+    values: [0.5, 1.0, 2.0, 4.0]
